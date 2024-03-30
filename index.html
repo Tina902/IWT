@@ -4,10 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <style>
+        .home-image img{
+    max-width: 20%;
+    height: 5;
+    border-radius: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(221, 161, 161);
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 3% 0;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    padding: 50px 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+.project{
+    margin-bottom: 40px;
+}
+
+.project img{
+    max-width: 40%;
+    height: 60%;
+    border-radius: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+
+<body>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+        
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form validation logic here
+            // Example:
+            let name = document.querySelector('input[type="text"]').value;
+            let email = document.querySelector('input[type="email"]').value;
+            let message = document.querySelector('textarea').value;
+        
+            if(name && email && message) {
+                alert('Message sent successfully!');
+                document.getElementById('contact-form').reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+        </script>
 <header align="center">
     <nav >
         <ul>
@@ -21,8 +127,7 @@
 
 <section id="home">
     <div class="container">
-        <div class="home-image">
-            <img src="C:\Users\Dell\Downloads\IMG_20240329_224439.jpg" alt="your image">
+        
         <h1>Welcome to My Portfolio</h1>
         <p>Hello everyone!🤠
             <p> I am Tina. I am a second year student pursuing B.tech IT from banasthali University , with a strong background in this field .</p>
@@ -50,14 +155,23 @@
         <h2>Portfolio</h2>
         <div class="project">
             <h3>project- Traffic management system</h3><br>
-            <img src="C:\Users\Dell\Downloads\featured.jpg" alt="Project 1"><br>
+            
             <p>
                 The aim of a Traffic Management System (TMS) is multifaceted, encompassing several key objectives aimed at improving the efficiency, safety, and sustainability of transportation networks. </p>
                 <p> of the primary aims of a TMS include:</p>
                  <p>
                 One of the central objectives of a TMS is to reduce traffic congestion on roads and highways. By implementing strategies such as optimized signal timing, dynamic lane control, and congestion pricing, TMS aims to improve traffic flow and minimize delays for motorists.
             </p>
-        <!-- Showcase your projects here -->
+        <h2>Some Exercises of IWT Lab</h2>
+        <a href="ex1.html">http://127.0.0.1:5500/html/ex1.html</a><br>
+        <a href="ex2.html">http://127.0.0.1:5500/html/ex2.html</a><br>
+        <a href="ex3.html">http://127.0.0.1:5500/html/ex3.html</a><br>
+        <a href="ex4.html">http://127.0.0.1:5500/html/ex4.html</a><br>
+        <a href="ex5.html">http://127.0.0.1:5500/html/ex5.html</a><br>
+        <a href="ex6.html">http://127.0.0.1:5500/html/ex6.html</a><br>
+        <a href="ex7.html">http://127.0.0.1:5500/html/ex7.html</a><br>
+        <a href="ex8.html">http://127.0.0.1:5500/html/ex8.html</a><br>
+        <a href="ex9.html">http://127.0.0.1:5500/html/ex9.html</a><br>
     </div>
 </section>
 
@@ -73,6 +187,5 @@
     </div>
 </section>
 
-<script src="script.js"></script>
 </body>
 </html>
